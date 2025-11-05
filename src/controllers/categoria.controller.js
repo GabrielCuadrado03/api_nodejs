@@ -2,9 +2,9 @@ const categoria = require('../models/categoria.models');
 
 exports.crearCategoria = async (req, res) => {
     try {
-        const { nombre, descripcion } = req.body;
+        const { Nombre, descripcion } = req.body;
         const nuevaCategoria = await categoria.create({
-            nombre,
+            Nombre,
             descripcion
 
         });
