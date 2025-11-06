@@ -1,0 +1,45 @@
+API REST DE PRODUCTOS CON NODE.JS, EXPRESS Y SEQUELIZE
+
+Este proyecto es una API REST creada con Node.js y Express, cuyo propósito principal es gestionar un sistema básico de productos conectados a una base de datos MySQL mediante Sequelize. La aplicación permite realizar operaciones CRUD (crear, leer, actualizar y eliminar) a través de diferentes endpoints que manejan datos en formato JSON, demostrando cómo se puede estructurar un backend modular y escalable.
+
+El servidor está desarrollado utilizando tecnologías clave como Node.js, Express, Sequelize y Dotenv. Node.js se encarga de ejecutar el entorno del servidor, Express facilita la creación de rutas y controladores, Sequelize actúa como ORM para interactuar con la base de datos MySQL de forma sencilla, y Dotenv gestiona las variables de entorno de manera segura mediante un archivo .env.
+
+La estructura del proyecto está organizada en carpetas:
+
+/src/controllers: contiene la lógica de negocio, donde se definen las funciones para manipular los productos.
+
+/src/routes: define las rutas HTTP y las conecta con los controladores.
+
+/src/models: incluye la definición del modelo de datos que representa la tabla de productos en la base de datos.
+
+/src/app.js: archivo principal que configura Express, carga las rutas y realiza la conexión con la base de datos.
+
+Para ejecutar el proyecto, se deben seguir los siguientes pasos:
+
+Clonar el repositorio con git clone <URL_DEL_REPOSITORIO>
+
+Ingresar a la carpeta del proyecto con cd api-rest-nodejsss
+
+Instalar las dependencias necesarias con npm install
+
+Crear un archivo .env en la raíz del proyecto y definir las variables de entorno, por ejemplo:
+
+PORT=3000
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=tu_contraseña
+DB_NAME=productosdb
+DB_PORT=3306
+
+
+Iniciar la aplicación con npm start o node ./src/app.js.
+
+Una vez el servidor esté en ejecución, la API estará disponible en el puerto configurado.
+
+Una solicitud GET a /api/productos devuelve la lista completa de productos registrados.
+
+Una solicitud POST a la misma ruta permite crear un nuevo producto enviando los datos en formato JSON.
+
+Las solicitudes PUT y DELETE permiten actualizar y eliminar productos específicos mediante su ID.
+
+En resumen, este proyecto es un ejemplo funcional y didáctico de cómo construir una API REST completa con Node.js, Express y Sequelize, conectada a una base de datos MySQL. Es ideal para estudiantes o desarrolladores que buscan entender cómo estructurar una aplicación backend moderna, modular y fácil de mantener, con manejo de entornos y conexión segura a la base de datos. 
